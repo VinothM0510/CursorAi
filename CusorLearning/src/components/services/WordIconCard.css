@@ -1,0 +1,57 @@
+.word-icon-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.word-icon-card:hover {
+  transform: translateY(-10px);
+}
+
+.word-icon-circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  transition: all 0.3s ease;
+}
+
+.word-icon-card:hover .word-icon-circle {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+}
+
+.word-icon {
+  font-size: 3rem;
+}
+
+.word-text {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .word-icon-circle {
+    width: 100px;
+    height: 100px;
+  }
+
+  .word-icon {
+    font-size: 2.5rem;
+  }
+
+  .word-text {
+    font-size: 1rem;
+  }
+}

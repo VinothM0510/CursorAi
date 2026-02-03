@@ -1,0 +1,49 @@
+.footer {
+  background-color: #34495e;
+  color: white;
+  padding: 2rem 0 1rem;
+  margin-top: auto;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* About page footer styles */
+body.about-page-active .footer {
+  background-color: red;
+}
+
+body.about-page-active .footer-content {
+  grid-template-columns: 1fr;
+}
+
+.footer-section h3 {
+  margin-bottom: 1rem;
+  color: #3498db;
+}
+
+.footer-section p {
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.footer-section p:hover {
+  color: #3498db;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+}

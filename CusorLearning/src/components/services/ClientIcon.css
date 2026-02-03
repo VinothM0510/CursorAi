@@ -1,0 +1,87 @@
+.client-icon-card {
+  background-color: transparent;
+  width: 100%;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.client-icon-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.flip-card-front {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.flip-card-back {
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.client-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.flip-card-front h3 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.flip-card-back h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.client-description {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  opacity: 0.9;
+}
+
+.client-details {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .client-icon-card {
+    height: 250px;
+  }
+
+  .client-icon {
+    font-size: 3rem;
+  }
+
+  .flip-card-front h3,
+  .flip-card-back h3 {
+    font-size: 1.2rem;
+  }
+}

@@ -1,0 +1,162 @@
+.client-section {
+  width: 100%;
+  display: grid;
+  grid-template-rows: auto auto auto;
+}
+
+.title-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 2rem 0 0;
+  background-color: #f8f9fa;
+}
+
+.description-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 10px 0 2rem;
+  background-color: #f8f9fa;
+}
+
+.content-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 2rem 0 3rem;
+  background-color: #f8f9fa;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin: 0;
+  color: #2c3e50;
+  width: 100%;
+}
+
+.section-description {
+  text-align: center;
+  color: #7f8c8d;
+  margin: 0;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.clients-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 100%;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+.flip-card-front {
+  background: white;
+  color: #2c3e50;
+}
+
+.flip-card-back {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.flip-card-front img {
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+}
+
+.flip-card-front p {
+  font-weight: 500;
+  color: #2c3e50;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.flip-card-back h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.flip-card-back .industry {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  margin: 0 0 1rem 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.flip-card-back .description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+  opacity: 0.95;
+}
+
+@media (max-width: 768px) {
+  .clients-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .flip-card {
+    height: 250px;
+  }
+
+  .flip-card-back h3 {
+    font-size: 1.2rem;
+  }
+
+  .flip-card-back .description {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .clients-grid {
+    grid-template-columns: 1fr;
+  }
+}
